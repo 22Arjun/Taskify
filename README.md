@@ -27,7 +27,14 @@ A simple, clean **Todo application** built with **Express.js**, **JavaScript**, 
 
 ## Demo
 
-*Add a screenshot or link to a live demo here (if available).*
+## 🎥 Demo
+
+### Login Page
+![Login](<img width="1680" height="936" alt="Image" src="https://github.com/user-attachments/assets/1888779c-4ce7-4027-b0fa-2ce4e63f995c" />)
+
+### Todo Page
+![Taskify UI](./assets/taskify-ui.png)
+
 
 ---
 
