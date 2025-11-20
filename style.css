@@ -54,6 +54,7 @@ button {
     font-weight: 600;
     font-size: 16px;
     cursor: pointer;
+    
 }
 
 
@@ -128,12 +129,7 @@ h1 {
     transform: scale(1.0);
 }
 
-#todo-div1 {
-    width: 490px;
-    height: 45px;
-    background-color: white;
-    margin-bottom: 18px;
-}
+
 
 .todo-div {
     width: 490px;
@@ -149,11 +145,14 @@ h1 {
     font-weight: 600;
     transition: transform 0.1s ease-in-out;
     cursor: pointer;
+    user-select: none;
+  
 
 }
 
 .todo-div:hover {
-    transform: scale(1.02);
+    transform: scale(1.012);
+    
 }
 
 .todo-div:active {
