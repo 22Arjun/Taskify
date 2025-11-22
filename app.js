@@ -1,4 +1,5 @@
-    const card1 = document.querySelector('.card');
+  /*
+  const card1 = document.querySelector('.card');
     const card2 = document.createElement('div');
     const heading1 = document.createElement('h1');
     const inputTodo = document.createElement('input');
@@ -79,3 +80,18 @@ function addTodo() {
         inputTodo.value = "";
     }
 }
+
+*/
+
+//-------------------------------------------------------------------------------
+
+const express = require('express');
+const app = express();
+
+app.get('/signup', (req, res) => {
+    res.sendFile(__dirname + "/signup.html");
+})
+
+
+
+app.listen(80);

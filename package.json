@@ -1,0 +1,25 @@
+{
+  "name": "taskify",
+  "version": "1.0.0",
+  "description": "A simple, clean **Todo application** built with **Express.js**, **JavaScript**, **HTML**, and **CSS**. Taskify provides a minimal, user-friendly interface to add, view, and manage todos. This repository contains both the frontend (vanilla HTML/CSS/JS) and a lightweight Express backend to serve files and provide a JSON-based API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/22Arjun/Taskify.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/22Arjun/Taskify/issues"
+  },
+  "homepage": "https://github.com/22Arjun/Taskify#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
