@@ -8,23 +8,26 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="card">
-            <h2>Create an Account</h2>
-            <h4>Username: </h6>
-            <input type="text" placeholder="Username" name="username">
-            <h4>Password:</h6>
-            <input type="text" placeholder="Password" name="password">
-            <a href="http://localhost/signup">
-                <button onclick="todo()">Sign Up</button>
-            </a>
-            <p>Already have an account? <a href="http://localhost/signin">Sign in</a></p>
+        <form action="http://localhost/signup" method="POST" id="myForm">
+            <div class="card">
+                <h2>Create an Account</h2>
+                <h4>Username: </h6>
+                <input type="text" placeholder="Username" name="username" required>
+                <h4>Password:</h6>
+                <input type="text" placeholder="Password" name="password" required>
+                <a>
+                    <button>Sign Up</button>
+                </a>
+                <p>Already have an account? <a href="http://localhost/signin">Sign in</a></p>
         </div>
+            </form>
+            
 
 
 
     </div>
 
 
-    <script src="app.js"></script>
+    <script src="../app.js"></script>
 </body>
 </html>

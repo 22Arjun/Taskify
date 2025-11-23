@@ -87,10 +87,13 @@ function addTodo() {
 
 const express = require('express');
 const app = express();
+const axios = require('axios');
 
 let users = [];
+
 app.use(express.json());
 app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
 
 
 function generateToken() {
@@ -111,11 +114,17 @@ app.get('/home', (req, res) => {
 })
 
 app.get('/signup', (req, res) => {
+    // res.json({
+    //     users: users
+    // })
     res.sendFile(__dirname + "/public/sign-up.html");
 })
 
 app.get('/signin', (req, res) => {
     res.sendFile(__dirname + "/public/sign-in.html");
+    // res.json({
+    //     users: users
+    // })
 })
 
 app.get('/todo', (req, res) => {
@@ -126,37 +135,37 @@ app.get('/todo', (req, res) => {
 
 //POST Requests
 app.post('/signup', (req, res) => {
-    const username = req.body.username;
-    const password = req.body.password;
+
+    console.log('User Data: ', req.body);
+    const {username, password} = req.body;
+
+ 
 
     const user = users.find(u => u.username == username);
-    if(users.length === 0 || user.username == username) {
-
+    if(user) {
+        res.redirect('/signup');
+    }
+    else {
         users.push({
             username: username,
             password: password
         });
         res.send({
-            message : 'You are signed up, Please Sign in'
+            message: "you're signed up bro"
         });
-    }
-    else {
-        res.redirect('/signup');
     }
 })
 
-app.post('signin', (req, res) => {
-    const username = req.body.username;
-    const password = req.body.password;
+app.post('/signin', (req, res) => {
+
+    const {username, password} = req.body;
 
     const user = users.find(u => u.username == username && u.password == password);
 
     if(user) {
         let token = generateToken();
         user.token = token;
-        res.send({
-            token: token
-        })
+        res.redirect('/todo');
     }
     else {
         res.status(403).send({
@@ -164,6 +173,8 @@ app.post('signin', (req, res) => {
         })
     }
 })
+
+
 
 
 app.listen(80);
