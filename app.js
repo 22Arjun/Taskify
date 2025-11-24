@@ -87,7 +87,6 @@ function addTodo() {
 
 const express = require('express');
 const app = express();
-const axios = require('axios');
 
 let users = [];
 
@@ -128,9 +127,9 @@ app.get('/signin', (req, res) => {
 })
 
 app.get('/todo', (req, res) => {
-    res.sendFile(__dirname + "/public/todo.html");
-})
 
+        res.sendFile(__dirname + "/public/todo.html");
+});
 
 
 //POST Requests
@@ -173,6 +172,8 @@ app.post('/signin', (req, res) => {
         })
     }
 })
+
+
 
 
 
